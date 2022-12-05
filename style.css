@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+:root{
+    --violet:hsl(257, 40%, 49%);
+    --soft-magneta:hsl(300, 69%, 71%);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--violet);
+    min-height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.wrapper{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    margin: 0 2rem;
+}
+.header img{
+    width: 190px;
+    padding-bottom: 20px;
+}
+.main{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}    
+.right-side h1, .right-side p{
+ color: #fff;
+ margin-bottom: 25px;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--violet);
+    background-color: #fff;
+    padding: 13px 50px;
+    border-radius: 25px;
+    box-shadow: 0 8px 17px -8px black;
+    border: none;
+}
+.btn:hover{
+    background-color: var(--soft-magneta);
+    color: #fff;
+    cursor: pointer;
+}
+.social{
+    text-align: right;
+    padding-bottom:5px ;
+}
+.social a i{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+.social a:not(:first-child){
+    margin-left: 2rem;
+}
+.social a i:after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width:40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    left:-15px;
+    bottom:-13px;
+}
+.social a:nth-child(2){
+    margin-left: 2.4rem;
+}
+.social a:hover i{
+    color: var(--soft-magneta);
+}
+.social a i:hover::after{
+    border-color: var(--soft-magneta);
+}
+
+@media only screen and (min-width:760px){
+    .main img{
+        width: 560px;
+    }
+    body{
+        background-image: url(./images/bg-desktop.svg);
+    }
+}
+@media only screen and (max-width:760px){
+    body{
+        background-image: url(./images/bg-mobile.svg);
+    }
+    .main img{
+        width: 100%;
+    }
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main h1{
+        font-size: 26px;
+    }
+    .social{
+        text-align: center;
+        margin-top: 50px;
+    }
+}
